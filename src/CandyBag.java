@@ -11,20 +11,13 @@ public class CandyBag{
     }
 
     public void removeTreat (String brand){
+        int brandCount = treats.get(brand);
         if (treats.containsKey(brand)){
-            if((treats.getOrDefault(brand,0)==1)){
-                treats.put(brand,0);}
-            else{
-            }
+            if(brandCount==1){
+                treats.remove(brand);}
+            else{treats.put(brand,brandCount-1);}
         }
     }
-
     public boolean contains(String brand) {
         return treats.containsKey(brand);
-    }
-
-
-    public static void main(String[] args) {
-        System.out.println("Hello world!!!");
-    }
-}
+    }}
