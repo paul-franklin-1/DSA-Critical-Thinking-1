@@ -1,15 +1,15 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class CandyBag{
+public class Bag{
     private Map<String,Integer> treats;
-    public CandyBag(){
+    public Bag(){
         treats = new HashMap<>();
     }
-    public void addTreat (String brand){
+    public void add (String brand){
         treats.put(brand,treats.getOrDefault(brand,0)+1);
     }
-    public void printTreats(){
+    public void print(){
         System.out.println("\nCurrent contents of bag:\n[");
         for (Map.Entry<String, Integer> entry : treats.entrySet()) {
             String key = entry.getKey();
@@ -25,7 +25,7 @@ public class CandyBag{
             totalTreats+=count;}
         return totalTreats;}
 
-    public void removeTreat (String brand){
+    public void remove (String brand){
         int brandCount = treats.get(brand);
         if (treats.containsKey(brand)){
             if(brandCount==1){
