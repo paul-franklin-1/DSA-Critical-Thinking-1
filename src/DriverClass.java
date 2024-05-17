@@ -13,13 +13,13 @@ public class DriverClass {
         JohnBag.printTreats();
         JohnBag.contains("Milky Way");
         JohnBag.contains("Mars Bar");
-        System.out.println("Quantity of Milky Way: " + JohnBag.count("Milky Way"));
+        System.out.println("Quantity of Milky Ways: " + JohnBag.count("Milky Way"));
         System.out.println("Quantity of Snickers: " + JohnBag.count("Snickers"));
         JohnBag.removeTreat("Milky Way");
         JohnBag.contains("Milky Way");
-        System.out.println("Quantity of Milky Way: " + JohnBag.count("Milky Way"));
+        System.out.println("Quantity of Milky Ways: " + JohnBag.count("Milky Way"));
         JohnBag.printTreats();
-        System.out.println("Size of bag: " + JohnBag.size());
+        System.out.println("Current size of bag: " + JohnBag.size());
 
 
 }}

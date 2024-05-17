@@ -10,11 +10,12 @@ public class CandyBag{
         treats.put(brand,treats.getOrDefault(brand,0)+1);
     }
     public void printTreats(){
+        System.out.println("\nCurrent contents of bag:\n[");
         for (Map.Entry<String, Integer> entry : treats.entrySet()) {
             String key = entry.getKey();
             Integer value = entry.getValue();
             System.out.println("Key: " + key + ", Value: " + value);
-        }}
+        }System.out.println("]");}
     public int count(String brand) {
         return treats.getOrDefault(brand, 0);}
 
