@@ -17,9 +17,10 @@ public class CandyBag{
             Integer value = entry.getValue();
             System.out.println("Key: " + key + ", Value: " + value);
         }*/
+    public int count(String brand) {
+        return treats.getOrDefault(brand, 0);}
 
-
-    public int quantity() {
+    public int size() {
         int totalTreats = 0;
         for(int count : treats.values()){
             totalTreats+=count;}

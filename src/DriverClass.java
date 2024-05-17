@@ -9,9 +9,11 @@ public class DriverClass {
         JohnBag.addTreat("Milky Way");
         for(int i=0;i<15;i++){
             JohnBag.addTreat("Snickers");}
-        System.out.println(JohnBag.quantity());
+        System.out.println(JohnBag.size());
         JohnBag.contains("Baby Ruth");
         JohnBag.contains("Mars Bar");
+        System.out.println(JohnBag.count("Almond Joy"));
+
 
 
 
