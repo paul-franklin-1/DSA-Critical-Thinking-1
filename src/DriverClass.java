@@ -7,13 +7,16 @@ public class DriverClass {
         for(int i=0;i<10;i++){
             JohnBag.addTreat("Almond Joy");}
         JohnBag.addTreat("Milky Way");
+        JohnBag.addTreat("Milky Way");
         for(int i=0;i<15;i++){
             JohnBag.addTreat("Snickers");}
         System.out.println(JohnBag.size());
-        JohnBag.contains("Baby Ruth");
+        JohnBag.contains("Milky Way");
         JohnBag.contains("Mars Bar");
         System.out.println(JohnBag.count("Almond Joy"));
-
+        JohnBag.removeTreat("Milky Way");
+        JohnBag.contains("Milky Way");
+        System.out.println(JohnBag.count("Milky Way"));
 
 
 

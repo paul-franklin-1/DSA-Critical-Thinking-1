@@ -1,6 +1,5 @@
 import java.util.HashMap;
 import java.util.Map;
-import java.util.*;
 
 public class CandyBag{
     private Map<String,Integer> treats;
