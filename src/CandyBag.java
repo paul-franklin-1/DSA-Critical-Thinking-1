@@ -9,13 +9,12 @@ public class CandyBag{
     public void addTreat (String brand){
         treats.put(brand,treats.getOrDefault(brand,0)+1);
     }
-    /*@Override
-    public String toString(){
+    public void printTreats(){
         for (Map.Entry<String, Integer> entry : treats.entrySet()) {
             String key = entry.getKey();
             Integer value = entry.getValue();
             System.out.println("Key: " + key + ", Value: " + value);
-        }*/
+        }}
     public int count(String brand) {
         return treats.getOrDefault(brand, 0);}
 
