@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.*;
 
 public class CandyBag{
     private Map<String,Integer> treats;
@@ -9,6 +10,20 @@ public class CandyBag{
     public void addTreat (String brand){
         treats.put(brand,treats.getOrDefault(brand,0)+1);
     }
+    /*@Override
+    public String toString(){
+        for (Map.Entry<String, Integer> entry : treats.entrySet()) {
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+            System.out.println("Key: " + key + ", Value: " + value);
+        }*/
+
+
+    public int quantity() {
+        int totalTreats = 0;
+        for(int count : treats.values()){
+            totalTreats+=count;}
+        return totalTreats;}
 
     public void removeTreat (String brand){
         int brandCount = treats.get(brand);
@@ -18,6 +33,9 @@ public class CandyBag{
             else{treats.put(brand,brandCount-1);}
         }
     }
-    public boolean contains(String brand) {
-        return treats.containsKey(brand);
-    }}
+    public void contains(String brand) {
+        boolean result = treats.containsKey(brand);
+        if (result) {
+            System.out.println("This bag contains the key \"" + brand + "\"");
+        } else {
+            System.out.println("This bag does not contain the key \"" + brand + "\"");}}}
