@@ -19,7 +19,7 @@ public class CandyBagManager {
         CandyBag.contains("Milky Way");
         System.out.println("Quantity of Milky Ways: " + CandyBag.count("Milky Way"));
         CandyBag.print();
-        System.out.println("Current size of bag: " + CandyBag.size());
+        CandyBag.size();
 
 
 }}
