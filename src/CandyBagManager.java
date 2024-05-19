@@ -1,4 +1,4 @@
-public class DriverClass {
+public class CandyBagManager {
     public static void main(String[] args) {
         Bag CandyBag = new Bag();
         CandyBag.add("Twix");
