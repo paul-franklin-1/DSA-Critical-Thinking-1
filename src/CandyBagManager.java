@@ -1,4 +1,13 @@
+/**
+ * This driver class allows user to interact with class "Bag"
+ * via the Bag class' constructor and methods
+ */
 public class CandyBagManager {
+    /**
+     * This is the main method and this is
+     * the first method run by the program
+     * @param args
+     */
     public static void main(String[] args) {
         Bag CandyBag = new Bag();
         CandyBag.add("Twix");
@@ -20,6 +29,4 @@ public class CandyBagManager {
         System.out.println("Quantity of Milky Ways: " + CandyBag.count("Milky Way"));
         CandyBag.print();
         CandyBag.size();
-
-
 }}
