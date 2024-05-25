@@ -96,6 +96,9 @@ import java.util.Map;
                     System.out.println("This bag does not contain the key \"" + brand + "\"");}}
             else{System.out.println("Alert: This bag does not exist");}}
         void merge(Bag2<T> otherBag){
+            Map<T,Integer> tempMap = new HashMap<>();
+            treats.putAll(otherBag.treats);
+
 
         }
 }
