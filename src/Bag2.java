@@ -1,7 +1,6 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
-    /**
+/**
      * this class constructs multisets that represent Halloween candy bags, and includes methods
      * to interact with multiset instances
      */
@@ -95,9 +94,14 @@ import java.util.Map;
                 } else {
                     System.out.println("This bag does not contain the key \"" + brand + "\"");}}
             else{System.out.println("Alert: This bag does not exist");}}
-        void merge(Bag2<T> otherBag){
-            Map<T,Integer> tempMap = new HashMap<>();
-            treats.putAll(otherBag.treats);
+        public void merge(Bag2<T> otherBag){
+            treats.putAll(otherBag.treats);}
+        public Bag2<T> distinct(){
+            Set<T> uniqueKeys = treats.keySet();
+            Bag2<T> newBag = new Bag2<>();
+            for(T key : uniqueKeys){
+                newBag.add(key);
+            }
 
 
         }
