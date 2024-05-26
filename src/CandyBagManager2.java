@@ -14,8 +14,8 @@ public class CandyBagManager2 {
         System.out.println("Size Candy Bag #1: " + CandyBag2.size() + "\n" +
                 "Size Candy Bag #2: " + CandyBag3.size());
         CandyBag2.merge(CandyBag3);
-        CandyBag2.print(CandyBag2);
-        System.out.println("Distinct candy brands in bag: " + CandyBag2.distinct());
+        CandyBag2.printThis(CandyBag2);
+        CandyBag2.distinct(CandyBag2);
 
     }}
 
