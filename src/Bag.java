@@ -3,7 +3,7 @@ import java.util.*;
      * this class constructs multisets that represent Halloween candy bags, and includes methods
      * to interact with multiset instances
      */
-    public class Bag2<T>{
+    public class Bag<T>{
         /**
          * this attribute is a hashmap declaration that assists the constructor in creating
          * an instance's multiset
@@ -14,7 +14,7 @@ import java.util.*;
          * this is the constructor for the bag class that creates a new hashmap that is
          * part of the new class object
          */
-        public Bag2(){
+        public Bag(){
             treats = new HashMap<>();
         }
 
@@ -36,7 +36,7 @@ import java.util.*;
          * this method prints a string representation of all the elements in the class object's,
          * multiset, including all their keys and values
          */
-    public void printThis(Bag2<T> bag){
+    public void print(Bag<T> bag){
         if(treats != null){
             System.out.println("\nCurrent contents of bag:\n[");
             for (Map.Entry<T, Integer> entry : treats.entrySet()) {
@@ -97,13 +97,12 @@ import java.util.*;
                 } else {
                     System.out.println("This bag does not contain the key \"" + brand + "\"");}}
             else{System.out.println("Alert: This bag does not exist");}}
-        public void merge(Bag2<T> otherBag){
-            treats.putAll(otherBag.treats);}
-        public void distinct(Bag2<String> bag){
-            System.out.println("Unique candy brands: " + bag.treats.keySet());
-            }}
-
-
-
-
+        public void merge(Bag<T> otherBag){
+            if ((otherBag != null)&&(treats != null)){
+                treats.putAll(otherBag.treats);}
+            else{System.out.println("Alert: One or more of these objects of class Bag do not exist.");}}
+        public void distinct(Bag<String> bag){
+            if(bag!=null){
+                System.out.println("Unique candy brands: " + bag.treats.keySet());}
+            else{System.out.println("Alert: This object of class Bag does not exist.");}}}
 
