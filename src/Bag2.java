@@ -1,7 +1,4 @@
 import java.util.*;
-
-import static sun.tools.jstat.Alignment.keySet;
-
 /**
      * this class constructs multisets that represent Halloween candy bags, and includes methods
      * to interact with multiset instances
@@ -102,12 +99,8 @@ import static sun.tools.jstat.Alignment.keySet;
             else{System.out.println("Alert: This bag does not exist");}}
         public void merge(Bag2<T> otherBag){
             treats.putAll(otherBag.treats);}
-        public void distinct(Bag2<T> bag){
-            Set<T> allKeys = treats.keySet();
-            Bag2<String> newBag = new Bag2<>();
-            for (T key : allKeys){
-                newBag.treats.put((String) key, 1);}
-            printThis((Bag2<T>) newBag);
+        public void distinct(Bag2<String> bag){
+            System.out.println("Unique candy brands: " + bag.treats.keySet());
             }}
 
 
