@@ -29,19 +29,23 @@ import java.util.*;
             treats.put(brand,treats.getOrDefault(brand,0)+1);
         }
 
+    public int count(T brand) {
+        if (treats != null){
+            return treats.getOrDefault(brand, 0);}
+        else{return 0;}}
         /**
          * this method prints a string representation of all the elements in the class object's,
          * multiset, including all their keys and values
          */
-        public void print(){
-            if(treats != null){
-                System.out.println("\nCurrent contents of bag:\n[");
-                for (Map.Entry<T, Integer> entry : treats.entrySet()) {
-                    T key = entry.getKey();
-                    Integer value = entry.getValue();
-                    System.out.println("Key: " + key + ", Value: " + value);
-                }System.out.println("]\n");}
-            else{System.out.println("Alert: This bag does not exist");}}
+    public void print(Bag2<T> bag){
+        if(treats != null){
+            System.out.println("\nCurrent contents of bag:\n[");
+            for (Map.Entry<T, Integer> entry : treats.entrySet()) {
+                T key = entry.getKey();
+                Integer value = entry.getValue();
+                System.out.println("Key: " + key + ", Value: " + value);
+            }System.out.println("]\n");}
+        else{System.out.println("Alert: This bag does not exist");}}
 
         /**
          * @return the quantity of elements in class object's multiset
@@ -53,7 +57,7 @@ import java.util.*;
                 for(int count : treats.values()){
                     totalTreats+=count;}
                 return totalTreats;}
-            else{System.out.print("Alert: This bag does not exist");}}
+            else{return 0;}}
 
         /**
          * --This method removes a specified String element from
@@ -96,13 +100,8 @@ import java.util.*;
             else{System.out.println("Alert: This bag does not exist");}}
         public void merge(Bag2<T> otherBag){
             treats.putAll(otherBag.treats);}
-        public Bag2<T> distinct(){
-            Set<T> uniqueKeys = treats.keySet();
-            Bag2<T> newBag = new Bag2<>();
-            for(T key : uniqueKeys){
-                newBag.add(key);
-            }
+        public Set<T> distinct(){
+            return treats.keySet();}}
 
 
-        }
-}
+
